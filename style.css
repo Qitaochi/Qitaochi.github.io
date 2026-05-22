@@ -1,0 +1,155 @@
+:root {
+  --color-X: #0f1419;
+  --color-Discord: #5865f2;
+  --color-GitHub: #0e0c0d;
+}
+
+body {
+  color: gray;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#sectionProfile {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideLine {
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 90vh;
+  border-left: 1px solid gray;
+}
+
+#leftEnd {
+  margin-right: 4em;
+}
+
+#rightEnd {
+  margin-left: 4em;
+}
+
+#middleLine {
+  height: 50vh;
+  margin: 2em;
+}
+
+#imgQitaochi {
+  max-width: 100%;
+  height: 80vh;
+  filter: drop-shadow(0.5em 0.5em 0.5em gray);
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
+
+#profile {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+#fullName {
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+
+#fullNameRuby {
+  position: relative;
+  transform: translateX(15%);
+  text-align: center;
+  letter-spacing: 0.3em;
+  margin-top: 0;
+}
+
+#tableProfile {
+  line-height: 4em;
+  border-spacing: 0;
+  padding-bottom: 4em;
+}
+
+.trProfile {
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+.thProfile {
+  text-align: left;
+  padding-left: 4em;
+  font-weight: normal;
+}
+
+.tdProfile {
+  padding-left: 2em;
+  padding-right: 4em;
+}
+
+#services {
+  display: flex;
+  height: 90vh;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  margin-left: 1px;
+}
+
+.aService {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  height: 100%;
+  border-left: 1px solid gray;
+}
+
+.pService {
+  position: relative;
+  writing-mode: vertical-rl;
+
+  color: white;
+  height: 10em;
+  padding-top: 1em;
+  margin: 0;
+  margin-right: 0em;
+  border: 0.1em solid;
+  border-radius: 0 0.5em 0.5em 0;
+  box-shadow: 0 0.5em 0.5em gray;
+
+  transition: all 0.2s 0s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  width: 1.8em;
+}
+
+.pService:hover {
+  width: 3em;
+}
+
+#pServiceX {
+  position: absolute;
+  background-color: var(--color-X);
+  border-color: var(--color-X);
+}
+
+#pServiceDiscord {
+  position: absolute;
+  background-color: var(--color-Discord);
+  border-color: var(--color-Discord);
+}
+
+#pServiceGitHub {
+  position: absolute;
+  background-color: var(--color-GitHub);
+  border-color: var(--color-GitHub);
+}
