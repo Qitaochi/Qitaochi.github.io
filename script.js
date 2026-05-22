@@ -1,1 +1,1 @@
-/// <reference path="JQuery.d.ts"/>
+/// <reference path="./jQuery/JQuery.d.ts"/>
