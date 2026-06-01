@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Anta&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&family=Noto+Sans+JP:wght@401&family=Sawarabi+Mincho&family=Ubuntu:wght@400;500&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css" />
   <script src="./jQuery/jquery-4.0.0.min.js"></script>
@@ -16,8 +16,11 @@
 </head>
 
 <body>
-  <div id="dots">
-    <div id="gradation"></div>
+  <div id="background1">
+    <div id="dots">
+      <div id="gradation"></div>
+    </div>
+    <div id="circle1"></div>
   </div>
 
   <main>
@@ -28,17 +31,17 @@
         <div id="pictures">
           <img src="./images/Hinagi01.png" id="imgQitaochi">
           <div id=checkitContainer>
-            <img src="./images/Hinagi_Laugh.png" class="checkit">
-            <img src="./images/Hinagi_Cry.png" class="checkit">
-            <img src="./images/Hinagi_Angry.png" class="checkit">
-            <img src="./images/Hinagi_Surprised.png" class="checkit">
-            <img src="./images/Hinagi_Chill.png" class="checkit">
+            <img src="./images/Hinagi_Laugh.png" class="checkitFace">
+            <img src="./images/Hinagi_Cry.png" class="checkitFace">
+            <img src="./images/Hinagi_Angry.png" class="checkitFace">
+            <img src="./images/Hinagi_Surprised.png" class="checkitFace">
+            <img src="./images/Hinagi_Chill.png" class="checkitFace">
           </div>
           <h3 id="quote">「自分の好きなことを夢中でやっとーときが一番やわ。」</h2>
         </div>
         <div class="sideLine" id="middleLine"></div>
         <div id="profile">
-          <div id="fullNameBox">
+          <div>
             <h1 id="fullName">落合　陽渚</h1>
             <h4 id="fullNameRuby">Hinagi Ochiai</h4>
           </div>
@@ -50,21 +53,21 @@
           </div>
 
 
-          <table id="tableProfile">
+          <table class="tableProfile">
             <tbody>
-              <tr class="trProfile">
+              <tr>
                 <th class="thProfile">username</th>
                 <td class="tdProfile">北落合</td>
               </tr>
-              <tr class="trProfile">
+              <tr>
                 <th class="thProfile">from</th>
                 <td class="tdProfile">兵庫県 神戸市北区</td>
               </tr>
-              <tr class="trProfile">
+              <tr>
                 <th class="thProfile">birthday</th>
                 <td class="tdProfile">2005年 4月18日</td>
               </tr>
-              <tr class="trProfile">
+              <tr>
                 <th class="thProfile">blood type</th>
                 <td class="tdProfile">AB</td>
               </tr>
@@ -72,7 +75,7 @@
           </table>
 
           <div id="extraBox1">
-            <img src="./images/Bird01.png" id="imgBird01">
+            <img src="./images/BirdLogo01.png" id="imgBird01">
             <div id="extra1"></div>
           </div>
 
@@ -95,6 +98,156 @@
             <p class="pService" id="pServiceBooth">Booth　Qitaochi</p>
           </a>
         </div>
+      </section>
+
+      <section id="sectionLikes">
+        <h2 class="title">Likes</h2><br>
+        <div class="sentenceFlex">
+          <div>
+            <h3>バードウォッチング</h3>
+            <p>
+              一番好きなのはルリビタキ。野鳥たちの魅力に気づいてから、早朝の公園に行ったり通学中見かける鳥たちを観察したりしています。まだ双眼鏡で眺めてるだけなので、いつか望遠カメラ買って写真に残したいなあ。
+            </p>
+          </div>
+          <div class="checkitContainerLikes">
+            <img src="./images/Bird02.jpg"><br>
+            <p>ヤマガラ<br>@有馬富士公園(兵庫県三田市)</p>
+          </div>
+          <div class="checkitContainerLikes">
+            <img src="./images/Bird03.jpg"><br>
+            <p>モズ♀<br>@ポートアイランド中央緑地(兵庫県神戸市中央区)</p>
+          </div>
+        </div>
+
+        <div id="backgroud2">
+          <div id="circle2"></div>
+        </div>
+
+        <div class="sentenceFlex">
+          <div>
+            <h3>イラスト</h3>
+            <p>
+              もともと絵師たちのイラストを見るのが好きでした。ずっと自分でも描きたいなと思っており、バイト代で液タブを購入してからいろいろ描くようになりました。まだまだ初心者です。オリキャラばっか描いてて、まだ二次創作は恐れ多い...。
+            </p>
+          </div>
+        </div>
+
+        <div class="sentenceFlex">
+          <div>
+            <h3>IT系</h3>
+            <p>
+              小学生の時に見た、Unity上で1,000mの滑り台を滑ったり、遺伝的アルゴリズムでブランコ一回転に挑戦したりする動画が全ての元凶。最初はMinecraftのレッドストーン回路だったものが、今ではRaspberry
+              PiでUbuntu Server建ててみたり、Androidアプリを作ったりするようになりました。ほとんど独学。フロントエンドからサーバーサイドまで、幅広いプラットフォームを扱えるようになりました。
+            </p>
+          </div>
+        </div>
+        <div class="cardFlex">
+          <div class="card">
+            <h3>言語系</h3>
+            <table class="tableLikes">
+              <tbody>
+                <tr class="trLikes">
+                  <th class="thLikes">C#</th>
+                  <td class="tdLikes">Unityを扱いたいと一番最初に独学した言語。すべての元凶。今や一番得意な言語です。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">C言語</th>
+                  <td class="tdLikes">ポインタ操作や動作の軽さが好き。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Lua</th>
+                  <td class="tdLikes">ComputerCraftというマイクラのMODで導入される言語のために学習。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">UdonSharp</th>
+                  <td class="tdLikes">VRChatでワールド作成のための言語。C#ベースでいかにU#の制約を抜けるられるかがミソ。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Java</th>
+                  <td class="tdLikes">学校で学んだ。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Python</th>
+                  <td class="tdLikes">汎用性の高さと実行の手軽さがいいね。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">HTML</th>
+                  <td class="tdLikes">大昔から自分だけのサイトを作りたくて。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">JavaScript</th>
+                  <td class="tdLikes">アニメーションがきらきらしてるサイトを作りたくて学んだ。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">jQuery</th>
+                  <td class="tdLikes">Ajax通信とかアニメーションとかがしたくて一番実装が簡単っていう理由で今でも使ってる。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">CSS</th>
+                  <td class="tdLikes">理想のサイトには不可欠だった。今やCSS標準でアニメーションできるみたいやね。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">PHP</th>
+                  <td class="tdLikes">超簡単にサーバーサイドスクリプトが組めるから好き。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">SQL</th>
+                  <td class="tdLikes">DBを学ぶまではtxtファイルをPHPで作成してたのは内緒。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Kotlin</th>
+                  <td class="tdLikes">今までで一番難しい言語だと思う。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Thyme</th>
+                  <td class="tdLikes">Algodooという物理演算ゲームもよく遊んでました。触れたのはC#よりも前だから元凶の元凶かもしれない。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">レッドストーン回路</th>
+                  <td class="tdLikes">WiiUでマイクラしてたときに、建築よりもサバイバルよりもRS回路組んで遊んでたと思う。元凶の元凶の元凶。</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>環境</h3>
+            <table class="tableLikes">
+              <tbody>
+                <tr class="trLikes">
+                  <th class="thLikes">Unity</th>
+                  <td class="tdLikes">Unityでシミュレーションしたかったのが一番最初のきっかけ。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Ubuntu Server</th>
+                  <td class="tdLikes">CLIをカタカタするのたのしい。</td>
+                </tr>
+                <tr class="trLikes">
+                  <th class="thLikes">Raspberry Pi 5</th>
+                  <td class="tdLikes">Ubuntu Serverとして時報システムとNASが家で動作中。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sentenceFlex">
+          <div>
+            <h3>ゲーム</h3>
+            <p>
+              スマホやPCでよくゲームを遊んでいます。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>音ゲー</h3>
+          <ul>
+            <li>Deemo</li>
+            <li>Cytus2</li>
+            <li>Rotaeno</li>
+          </ul>
+        </div>
+
       </section>
     </article>
   </main>

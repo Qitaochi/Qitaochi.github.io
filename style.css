@@ -9,12 +9,16 @@
 }
 
 body {
-  color: gray;
-  font-family: "Sawarabi Mincho", serif;
+  color: dimgray;
+  font-family: "Ubuntu", "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   font-style: normal;
 
   overflow-x: hidden;
+}
+
+article {
+  height: fit-content;
 }
 
 p {
@@ -30,7 +34,7 @@ p {
   transform: rotate(10deg);
   z-index: -1;
 
-  --DOTS_COLOR: var(--color-QGreen);
+  --DOTS_COLOR: aquamarine;
   --DOTS_SIZE: 30px;
   --DOTS_POSITION: 5px;
   background-image:
@@ -55,8 +59,36 @@ p {
   background-image: linear-gradient(transparent, white);
 }
 
+#circle1 {
+  position: absolute;
+
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  top: 40%;
+  left: -200px;
+  background-color: aquamarine;
+  border-radius: 50% 50%;
+}
+
+#backgroud2 {
+  position: relative;
+  width: 100%;
+}
+
+#circle2 {
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  left: 100%;
+  border: 6px aquamarine dashed;
+  border-radius: 50% 50%;
+}
+
 #sectionProfile {
-  margin-top: 5vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,31 +118,24 @@ p {
   position: relative;
 }
 
-.checkitFlame {
-  position: absolute;
-  top: 0;
-  padding: 1em;
-  background-color: white;
-  filter: drop-shadow(0.4em 0.4em 0.5em gray);
-}
-
 #checkitContainer {
   position: absolute;
   top: 0;
+  width: 20%;
   display: flex;
   flex-direction: column;
 }
 
-.checkit {
+.checkitFace {
   position: relative;
   top: 0;
   left: 0;
   margin: 0.5em;
-  width: 30%;
+  width: 100%;
   height: auto;
   background-color: honeydew;
   border: 0.5em white solid;
-  filter: drop-shadow(0.4em 0.4em 0.5em gray);
+  box-shadow: 0.4em 0.4em 0.5em gray;
 }
 
 #quote {
@@ -119,13 +144,9 @@ p {
   right: 0;
   writing-mode: vertical-rl;
   letter-spacing: 0.2em;
-
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
   color: honeydew;
-  -webkit-text-stroke: 3px cadetblue;
+  -webkit-text-stroke: 0.16em cadetblue;
   paint-order: stroke;
 }
 
@@ -144,14 +165,10 @@ p {
   align-self: center;
 }
 
-#introduce {
-  border-top: 1px var(--color-QGreenDark) solid;
-  border-bottom: 1px var(--color-QGreenDark) solid;
-}
-
 #fullName {
   text-align: center;
   margin-bottom: 0.1em;
+  font-weight: 500;
 }
 
 #fullNameRuby {
@@ -162,7 +179,12 @@ p {
   margin-top: 0;
 }
 
-#tableProfile {
+#introduce {
+  border-top: 1px var(--color-QGreenDark) solid;
+  border-bottom: 1px var(--color-QGreenDark) solid;
+}
+
+.tableProfile {
   line-height: 2em;
 }
 
@@ -215,27 +237,33 @@ p {
 }
 
 .aService {
-  position: relative;
+  position: relative; /*
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal;*/
   text-decoration: none;
   height: 100%;
   border-left: 1px solid gray;
+}
+
+.service {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .pService {
   position: absolute;
   writing-mode: sideways-rl;
 
-  color: white;
+  background-color: white;
   height: 10em;
   padding-top: 1em;
   margin: 0;
   margin-right: 0em;
-  border: 0.1em solid;
+  border: 0.2em solid;
   border-radius: 0 0.5em 0.5em 0;
-  box-shadow: 0 0.5em 0.5em gray;
+  box-shadow: 0.1em 0.5em 0.5em gray;
 
   transition: all 0.2s 0s;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
@@ -247,26 +275,120 @@ p {
 }
 
 #pServiceX {
-  background-color: var(--color-X);
+  color: var(--color-X);
   border-color: var(--color-X);
 }
 
 #pServiceDiscord {
-  background-color: var(--color-Discord);
+  color: var(--color-Discord);
   border-color: var(--color-Discord);
 }
 
 #pServiceGitHub {
-  background-color: var(--color-GitHub);
+  color: var(--color-GitHub);
   border-color: var(--color-GitHub);
 }
 
 #pServiceYouTube {
-  background-color: var(--color-YouTube);
+  color: var(--color-YouTube);
   border-color: var(--color-YouTube);
 }
 
 #pServiceBooth {
-  background-color: var(--color-Booth);
+  color: var(--color-Booth);
   border-color: var(--color-Booth);
+}
+
+#sectionLikes {
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 5vh;
+  max-width: 1100px;
+}
+
+.title {
+  display: inline-block;
+  padding-bottom: 0.5em;
+  border-bottom: 2px var(--color-QGreenDark) dashed;
+}
+
+.sentenceFlex {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.sentenceFlex h3 {
+  padding-left: 1em;
+}
+
+.sentenceFlex p {
+  padding-left: 2em;
+}
+
+.checkitContainerLikes {
+  position: relative;
+  flex-basis: 300px;
+  background-color: white;
+  height: fit-content;
+  border: 0.8em white solid;
+  box-shadow: 0.4em 0.4em 0.5em gray;
+}
+
+.checkitContainerLikes:nth-of-type(1) {
+  rotate: 15deg;
+}
+
+.checkitContainerLikes:nth-of-type(2) {
+  rotate: -10deg;
+}
+
+.checkitContainerLikes img {
+  width: 100%;
+}
+
+.checkitContainerLikes p {
+  font-size: 10px;
+}
+
+.cardFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  min-width: 15em;
+  margin: 1em;
+  padding: 0 1em 1em 1em;
+  border: 0.1em var(--color-QGreenDark) solid;
+  border-radius: 0.5em;
+}
+
+.card h3 {
+  text-align: center;
+  border-bottom: 2px var(--color-QGreenDark) dashed;
+}
+
+.tableLikes {
+  line-height: 2em;
+}
+
+.trLikes {
+  font-size: 14px;
+}
+
+.thLikes,
+.tdLikes {
+  border-bottom: 1px var(--color-QGreenDark) dashed;
+}
+
+.thLikes {
+  padding-left: 0;
+  width: 9em;
+  background-color: honeydew;
+  font-weight: normal;
+}
+
+.tdLikes {
+  padding-left: 1em;
+  padding-right: 4em;
 }
