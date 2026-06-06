@@ -1,17 +1,20 @@
 :root {
-  --color-QGreen: rgb(127, 255, 149);
-  --color-QGreenDark: cadetblue;
-  --color-Letter: dimgray;
-  --color-X: #0f1419;
-  --color-Discord: #5865f2;
-  --color-GitHub: #0e0c0d;
+  --color-green-light: honeydew;
+  --color-green: rgb(127, 255, 149);
+  --color-green-dark: cadetblue;
+  --color-yellow-light: lightyellow;
+  --color-yellow-dark: goldenrod;
+  --color-letter: dimgray;
+  --color-X: rgb(15, 20, 25);
+  --color-Discord: rgb(88, 101, 242);
+  --color-GitHub: rgb(14, 12, 13);
   --color-YouTube: red;
   --color-Booth: rgb(252, 77, 80);
 }
 
 body {
   position: relative;
-  color: var(--color-Letter);
+  color: var(--color-letter);
   font-family: "Ubuntu", "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -25,16 +28,41 @@ article {
 
 section {
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  width: 1100px;
+}
+
+table {
+  line-height: 2em;
+}
+
+th,
+td {
+  border-bottom: 1px var(--color-green-dark) dashed;
+}
+
+th {
+  background-color: var(--color-yellow-light);
+  font-weight: normal;
+}
+
+td {
+  padding-left: 1em;
+  padding-right: 4em;
+}
+
+table p {
+  text-indent: 0;
 }
 
 p {
   line-height: 1.5;
+  text-indent: 1em;
 }
 
 a,
 a:visited {
-  color: var(--color-Letter);
+  color: var(--color-letter);
 }
 
 li {
@@ -56,7 +84,7 @@ li {
   rotate: 15deg;
   z-index: -1;
 
-  --DOTS_COLOR: var(--color-QGreen);
+  --DOTS_COLOR: var(--color-green);
   --DOTS_SIZE: 30px;
   --DOTS_POSITION: 5px;
   background-image: radial-gradient(var(--DOTS_COLOR) var(--DOTS_POSITION), transparent var(--DOTS_POSITION)), radial-gradient(var(--DOTS_COLOR) var(--DOTS_POSITION), transparent var(--DOTS_POSITION));
@@ -81,34 +109,99 @@ li {
   background-image: linear-gradient(transparent, white);
 }
 
-#circle1 {
-  position: absolute;
-
-  z-index: -1;
-  width: 600px;
-  height: 600px;
-  right: 90%;
-  background-color: aquamarine;
-  border-radius: 50% 50%;
-}
-
 #circle2 {
-  position: absolute;
+  position: relative;
+}
 
+#circle2::after {
+  content: "";
+  position: absolute;
   z-index: -1;
-  width: 600px;
-  height: 600px;
-  right: 90%;
-  background-color: aquamarine;
+  width: 800px;
+  height: 800px;
+  left: 90%;
+  border: 5px aquamarine dashed;
   border-radius: 50% 50%;
 }
 
-#sectionProfile {
+#square1 {
   position: relative;
-  width: 1100px;
+}
+
+#square1::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  right: 90%;
+  bottom: 0;
+  rotate: 30deg;
+  border: 5px aquamarine dashed;
+}
+
+#circle3 {
+  position: relative;
+}
+
+#circle3::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  left: -100%;
+  border: 10px aquamarine dashed;
+  border-radius: 50% 50%;
+}
+
+#circle4 {
+  position: relative;
+}
+
+#circle4::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  border: 10px aquamarine dashed;
+  border-radius: 50% 50%;
+}
+
+#square2 {
+  position: relative;
+}
+
+#square2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 1000px;
+  height: 100px;
+  right: 20%;
+  rotate: 40deg;
+  border: 5px aquamarine dashed;
+}
+
+#circle5 {
+  position: relative;
+}
+
+#circle5::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 800px;
+  height: 800px;
+  left: 60%;
+  border: 10px aquamarine dashed;
+  border-radius: 50% 50%;
 }
 
 #profileFlex {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,7 +258,7 @@ li {
   margin: 0.5em;
   width: 100%;
   height: auto;
-  background-color: honeydew;
+  background-color: var(--color-green-light);
   border: 0.5em white solid;
   box-shadow: 0.4em 0.4em 0.5em gray;
 }
@@ -177,8 +270,8 @@ li {
   writing-mode: vertical-rl;
   letter-spacing: 0.2em;
   font-weight: 400;
-  color: honeydew;
-  -webkit-text-stroke: 0.16em cadetblue;
+  color: var(--color-green-light);
+  -webkit-text-stroke: 0.16em var(--color-green-dark);
   paint-order: stroke;
 }
 
@@ -197,13 +290,13 @@ li {
   align-self: center;
 }
 
-#fullName {
+#profile h1 {
   text-align: center;
   margin-bottom: 0.1em;
   font-weight: 500;
 }
 
-#fullNameRuby {
+#profile h4 {
   position: relative;
   transform: translateX(15%);
   text-align: center;
@@ -212,28 +305,8 @@ li {
 }
 
 #introduce {
-  border-top: 1px var(--color-QGreenDark) solid;
-  border-bottom: 1px var(--color-QGreenDark) solid;
-}
-
-.tableProfile {
-  line-height: 2em;
-}
-
-.thProfile,
-.tdProfile {
-  border-bottom: 1px var(--color-QGreenDark) dashed;
-}
-
-.thProfile {
-  padding-left: 0;
-  background-color: lightyellow;
-  font-weight: normal;
-}
-
-.tdProfile {
-  padding-left: 1em;
-  padding-right: 4em;
+  border-top: 1px var(--color-green-dark) solid;
+  border-bottom: 1px var(--color-green-dark) solid;
 }
 
 #extraBox1 {
@@ -250,7 +323,7 @@ li {
 #extra1 {
   width: 100%;
   height: 70px;
-  background-image: linear-gradient(180deg, var(--color-QGreen), var(--color-QGreen) 25%, white);
+  background-image: linear-gradient(180deg, var(--color-green), var(--color-green) 25%, white);
 }
 
 #services {
@@ -264,6 +337,7 @@ li {
 }
 
 #services p {
+  text-indent: 0;
   height: 4em;
 }
 
@@ -316,15 +390,10 @@ li {
   border-color: var(--color-Booth);
 }
 
-#sectionLikes {
-  margin-top: 100px;
-  max-width: 1100px;
-}
-
 .title {
   display: inline-block;
   padding-bottom: 0.5em;
-  border-bottom: 2px var(--color-QGreenDark) dashed;
+  border-bottom: 2px var(--color-green-dark) solid;
 }
 
 .sentenceFlex {
@@ -333,14 +402,16 @@ li {
 }
 
 .sentenceFlex h3 {
-  padding-left: 1em;
+  display: inline-block;
+  margin-left: 1em;
+  border-bottom: 2px var(--color-green-dark) dashed;
 }
 
 .sentenceFlex p {
-  padding-left: 2em;
+  margin-left: 2em;
 }
 
-.checkitContainerLikes {
+.checkitContainerBirds {
   position: relative;
   flex-basis: 300px;
   background-color: white;
@@ -349,19 +420,19 @@ li {
   box-shadow: 0.4em 0.4em 0.5em gray;
 }
 
-.checkitContainerLikes:nth-of-type(1) {
+.checkitContainerBirds:nth-of-type(1) {
   rotate: 15deg;
 }
 
-.checkitContainerLikes:nth-of-type(2) {
+.checkitContainerBirds:nth-of-type(2) {
   rotate: -10deg;
 }
 
-.checkitContainerLikes img {
+.checkitContainerBirds img {
   width: 100%;
 }
 
-.checkitContainerLikes p {
+.checkitContainerBirds p {
   font-size: 10px;
 }
 
@@ -375,37 +446,51 @@ li {
   margin: 1em;
   padding: 0 1em 1em 1em;
   background-color: white;
-  border: 0.1em var(--color-QGreenDark) solid;
+  border: 0.1em var(--color-green-dark) solid;
   border-radius: 0.5em;
 }
 
 .card h3 {
   text-align: center;
-  border-bottom: 2px var(--color-QGreenDark) dashed;
+  border-bottom: 2px var(--color-green-dark) dashed;
 }
 
-.tableLikes {
-  border-collapse: collapse;
-  line-height: 2em;
-}
-
-.trLikes {
+.card tr {
   font-size: 14px;
 }
 
-.thLikes,
-.tdLikes {
-  border-bottom: 1px var(--color-QGreenDark) dashed;
+.card th {
+  width: 10em;
 }
 
-.thLikes {
-  padding-left: 0;
-  width: 9em;
-  background-color: lightyellow;
-  font-weight: normal;
+.card p {
+  text-indent: 0;
 }
 
-.tdLikes {
-  padding-left: 1em;
-  padding-right: 4em;
+.card iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0.1em var(--color-green-dark) solid;
+  border-radius: 0.5em;
+}
+
+.card .aHover {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0.1em var(--color-green-dark) solid;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+
+  transition: all 0.2s 0s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1.05);
+}
+
+.card .aHover:hover img {
+  transform: scale(1.2);
 }
