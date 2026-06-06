@@ -269,7 +269,6 @@ li {
   right: 0;
   writing-mode: vertical-rl;
   letter-spacing: 0.2em;
-  font-weight: 400;
   color: var(--color-green-light);
   -webkit-text-stroke: 0.16em var(--color-green-dark);
   paint-order: stroke;
@@ -334,6 +333,7 @@ li {
   filter: drop-shadow(0.5em 0.5em 0.1em gainsboro);
   text-decoration: none;
   text-align: center;
+  font-weight: 500;
 }
 
 #services p {
