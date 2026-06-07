@@ -55,6 +55,16 @@ table p {
   text-indent: 0;
 }
 
+footer {
+  font-size: 14px;
+  background-color: var(--color-yellow-light);
+  text-align: center;
+}
+
+footer div {
+  padding: 50px;
+}
+
 p {
   line-height: 1.5;
   text-indent: 1em;
@@ -67,6 +77,11 @@ a:visited {
 
 li {
   line-height: 1.5;
+}
+
+hr {
+  border-color: var(--color-green-dark);
+  border-style: dashed;
 }
 
 .background {
